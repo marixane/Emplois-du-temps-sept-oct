@@ -107,6 +107,7 @@ h1 {
 
 .project.collège { --accent: #20a77b; }
 .project.primaire { --accent: #ed9f27; }
+.project.exam { --accent: #8b5cf6; }
 
 .cycle {
   margin-bottom: 8px;
