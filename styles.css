@@ -193,6 +193,13 @@ h1 {
   white-space: nowrap;
 }
 
+.project-group.lycée .group-choices small {
+  overflow: visible;
+  line-height: 1.3;
+  text-overflow: clip;
+  white-space: normal;
+}
+
 .choice-arrow {
   position: absolute;
   top: 50%;
