@@ -43,6 +43,12 @@ body {
   font-size: 42px;
 }
 
+.hero-icon svg {
+  width: 58px;
+  height: 58px;
+  filter: drop-shadow(0 7px 8px rgba(0, 17, 39, .28));
+}
+
 .eyebrow {
   margin: 0 0 4px;
   color: #4177a5;
@@ -262,6 +268,7 @@ h1 {
   .page-shell { padding: 38px 0; }
   .hero { align-items: flex-start; }
   .hero-icon { width: 62px; height: 62px; border-radius: 18px; font-size: 31px; }
+  .hero-icon svg { width: 44px; height: 44px; }
   .projects { grid-template-columns: 1fr; }
   .project { min-height: 112px; }
   .project-group { min-height: 0; padding: 22px; }
