@@ -118,6 +118,18 @@ h1 {
 }
 
 .project-group.collège { --accent: #20a77b; }
+.project-group.primaire { --accent: #ed9f27; }
+
+.project-group.primaire .group-choices a[dir="rtl"] {
+  padding-right: 17px;
+  padding-left: 39px;
+  text-align: right;
+}
+
+.project-group.primaire .group-choices a[dir="rtl"] .choice-arrow {
+  right: auto;
+  left: 14px;
+}
 
 .group-heading {
   display: flex;
@@ -359,6 +371,16 @@ h1 {
   .group-choices a + a {
     border-top: 0;
     border-left: 1px solid color-mix(in srgb, var(--accent) 22%, #dce4eb);
+  }
+
+  .project-group.primaire .group-choices a[dir="rtl"] {
+    padding-right: 12px;
+    padding-left: 28px;
+  }
+
+  .project-group.primaire .group-choices a[dir="rtl"] .choice-arrow {
+    right: auto;
+    left: 7px;
   }
 
   .group-choices a > span:first-child {
