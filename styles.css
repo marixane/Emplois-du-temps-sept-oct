@@ -77,6 +77,61 @@ h1 {
   gap: 18px;
 }
 
+.whatsapp-contact {
+  --whatsapp-green: #19a866;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(520px, 100%);
+  margin: 24px auto 0;
+  padding: 14px 18px;
+  border: 1px solid rgba(25, 168, 102, .34);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(232, 255, 244, .95), rgba(255, 255, 255, .9));
+  box-shadow: 0 10px 24px rgba(25, 132, 82, .12), inset 0 1px 0 #fff;
+  color: #123d2b;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.whatsapp-contact:hover,
+.whatsapp-contact:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(25, 168, 102, .65);
+  box-shadow: 0 16px 30px rgba(25, 132, 82, .2), inset 0 1px 0 #fff;
+  outline: none;
+}
+
+.whatsapp-logo {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #39d98a, var(--whatsapp-green));
+  box-shadow: 0 6px 13px rgba(25, 132, 82, .22), inset 0 1px 0 rgba(255,255,255,.5);
+  color: #fff;
+}
+
+.whatsapp-logo svg { width: 27px; height: 27px; }
+.whatsapp-contact > span:nth-child(2) { min-width: 0; }
+.whatsapp-contact strong,
+.whatsapp-contact small { display: block; }
+.whatsapp-contact strong { font-size: 16px; font-weight: 850; }
+.whatsapp-contact small {
+  margin-top: 3px;
+  color: #4d7865;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.whatsapp-arrow {
+  margin-left: auto;
+  color: var(--whatsapp-green);
+  font-size: 23px;
+  font-weight: 900;
+}
+
 .project {
   --accent: #3f83c5;
   position: relative;
@@ -422,6 +477,19 @@ h1 {
     height: 32px;
     font-size: 20px;
   }
+
+  .whatsapp-contact {
+    gap: 10px;
+    margin-top: 18px;
+    padding: 11px 13px;
+    border-radius: 15px;
+  }
+
+  .whatsapp-logo { width: 36px; height: 36px; }
+  .whatsapp-logo svg { width: 23px; height: 23px; }
+  .whatsapp-contact strong { font-size: 14px; }
+  .whatsapp-contact small { font-size: 10px; }
+  .whatsapp-arrow { font-size: 20px; }
 }
 
 @media (max-width: 360px) {
