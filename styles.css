@@ -29,6 +29,25 @@ body {
   margin-bottom: 38px;
 }
 
+.textbooks-block {
+  padding: 28px;
+  border: 1px solid rgba(81, 133, 186, .2);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 0 0, rgba(104, 194, 255, .12), transparent 32rem),
+    rgba(255, 255, 255, .38);
+  box-shadow: 0 16px 36px rgba(27, 49, 75, .08), inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+.textbooks-block .hero { margin-bottom: 28px; }
+
+.tools-block {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
 .hero > div { min-width: 0; }
 
 /* Sur grand écran, le contact reste dans l’en-tête, à droite du titre. */
@@ -403,6 +422,47 @@ h1 {
 .project.salary .project-icon { color: var(--accent); }
 .project.calendar .project-icon { color: var(--accent); }
 
+.tools-block .project {
+  grid-column: auto;
+  min-height: 112px;
+  padding: 18px 50px 18px 76px;
+  border-radius: 18px;
+}
+
+.tools-block .project-icon-logo {
+  left: 17px;
+  width: 45px;
+  height: 45px;
+}
+
+.tools-block .project-icon-logo svg {
+  width: 33px;
+  height: 33px;
+}
+
+.tools-block .project .cycle {
+  margin-bottom: 4px;
+  font-size: 10px;
+}
+
+.tools-block .project strong {
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.tools-block .project small {
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.tools-block .project .arrow {
+  right: 14px;
+  width: 29px;
+  height: 29px;
+  font-size: 19px;
+}
+
 .project-icon-logo {
   position: absolute;
   top: 50%;
@@ -517,6 +577,19 @@ h1 {
     gap: 12px;
   }
 
+  .textbooks-block {
+    padding: 15px;
+    border-radius: 22px;
+  }
+
+  .textbooks-block .hero { margin-bottom: 18px; }
+
+  .tools-block {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
   .project-group {
     min-height: 0;
     padding: 15px;
@@ -622,6 +695,24 @@ h1 {
 
   .project.calendar {
     padding-left: 78px;
+  }
+
+  .tools-block .project,
+  .tools-block .project.salary,
+  .tools-block .project.calendar {
+    min-height: 88px;
+    padding: 14px 50px 14px 66px;
+  }
+
+  .tools-block .project-icon-logo {
+    left: 14px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .tools-block .project-icon-logo svg {
+    width: 31px;
+    height: 31px;
   }
 
   .project-icon-logo {
