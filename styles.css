@@ -29,6 +29,15 @@ body {
   margin-bottom: 38px;
 }
 
+.hero > div { min-width: 0; }
+
+/* Sur grand écran, le contact reste dans l’en-tête, à droite du titre. */
+.hero > .whatsapp-contact {
+  flex: 0 1 360px;
+  width: min(360px, 36%);
+  margin: 0 0 0 auto;
+}
+
 .hero-icon {
   display: grid;
   width: 82px;
@@ -403,8 +412,16 @@ h1 {
 
   .hero {
     align-items: center;
+    flex-wrap: wrap;
     gap: 13px;
     margin-bottom: 20px;
+  }
+
+  /* Sur téléphone, on conserve le bouton sous le titre, comme auparavant. */
+  .hero > .whatsapp-contact {
+    flex: 1 1 100%;
+    width: 100%;
+    margin: 0 auto 18px;
   }
 
   .hero-icon {
