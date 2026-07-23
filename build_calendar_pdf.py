@@ -21,7 +21,7 @@ def draw_contained(pdf, image_path):
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 pdf = canvas.Canvas(str(OUTPUT), pagesize=(PAGE_W, PAGE_H), pageCompression=1)
-for image_name in ("calendrier-semestre-1.png", "calendrier-semestre-2.png"):
+for image_name in ("calendrier-semestre-1.webp", "calendrier-semestre-2.webp"):
     draw_contained(pdf, ROOT / "assets" / image_name)
     pdf.showPage()
 pdf.save()
