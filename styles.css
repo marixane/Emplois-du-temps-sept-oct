@@ -88,9 +88,7 @@ h1 {
 
 .whatsapp-contact {
   --whatsapp-green: #19a866;
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  display: block;
   width: min(520px, 100%);
   margin: 0 auto 24px;
   padding: 14px 18px;
@@ -111,6 +109,32 @@ h1 {
   outline: none;
 }
 
+.whatsapp-contact-top,
+.whatsapp-contact-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.whatsapp-contact-top strong,
+.whatsapp-contact-bottom > span:last-child {
+  min-width: 0;
+}
+
+.whatsapp-contact-top strong {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.whatsapp-contact-divider {
+  display: block;
+  height: 1px;
+  margin: 10px 0;
+  background: rgba(25, 168, 102, .16);
+}
+
 .whatsapp-logo {
   display: grid;
   width: 42px;
@@ -123,15 +147,30 @@ h1 {
   color: #fff;
 }
 
-.whatsapp-logo svg { width: 27px; height: 27px; }
-.whatsapp-contact > span:nth-child(2) { min-width: 0; }
-.whatsapp-contact strong,
-.whatsapp-contact small { display: block; }
-.whatsapp-contact strong { font-size: 16px; font-weight: 850; }
-.whatsapp-contact small {
+.whatsapp-logo svg,
+.whatsapp-calendar svg { width: 27px; height: 27px; }
+
+.whatsapp-calendar {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  place-items: center;
+  color: var(--whatsapp-green);
+}
+
+.whatsapp-contact-bottom strong,
+.whatsapp-contact-bottom small { display: block; }
+.whatsapp-contact-bottom strong {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.whatsapp-contact-bottom small {
   margin-top: 3px;
-  color: #4d7865;
-  font-size: 12px;
+  color: var(--whatsapp-green);
+  font-size: 11px;
+  font-weight: 700;
   white-space: nowrap;
 }
 .whatsapp-arrow {
@@ -588,7 +627,6 @@ h1 {
   }
 
   .whatsapp-contact {
-    gap: 10px;
     margin: 0 auto 18px;
     padding: 11px 13px;
     border-radius: 15px;
@@ -596,8 +634,14 @@ h1 {
 
   .whatsapp-logo { width: 36px; height: 36px; }
   .whatsapp-logo svg { width: 23px; height: 23px; }
-  .whatsapp-contact strong { font-size: 14px; }
-  .whatsapp-contact small { font-size: 10px; }
+  .whatsapp-contact-top,
+  .whatsapp-contact-bottom { gap: 9px; }
+  .whatsapp-contact-top strong { font-size: 13px; }
+  .whatsapp-contact-divider { margin: 7px 0; }
+  .whatsapp-calendar { width: 31px; height: 31px; }
+  .whatsapp-calendar svg { width: 23px; height: 23px; }
+  .whatsapp-contact-bottom strong { font-size: 11px; }
+  .whatsapp-contact-bottom small { font-size: 10px; }
   .whatsapp-arrow { font-size: 20px; }
 }
 
