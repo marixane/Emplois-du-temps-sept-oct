@@ -528,7 +528,7 @@ h1 {
 
 @media (max-width: 700px) {
   .page-shell {
-    width: min(100% - 20px, 520px);
+    width: min(calc(100% - 20px), 520px);
     padding: 24px 0 30px;
   }
 
