@@ -380,6 +380,17 @@ h1 {
 .project.primaire { --accent: #ed9f27; }
 .project.exam { --accent: #8b5cf6; }
 
+.project.salary {
+  --accent: #b06a28;
+  grid-column: 1 / -1;
+  min-height: 126px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(233, 172, 95, .18), transparent 45%),
+    rgba(255, 255, 255, .84);
+}
+
+.project.salary .project-icon { color: var(--accent); }
+
 .project-icon-logo {
   position: absolute;
   top: 50%;
