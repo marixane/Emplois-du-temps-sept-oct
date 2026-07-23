@@ -384,6 +384,7 @@ h1 {
   --accent: #b06a28;
   grid-column: 1 / -1;
   min-height: 126px;
+  padding-left: 126px;
   background:
     radial-gradient(circle at 100% 0, rgba(233, 172, 95, .18), transparent 45%),
     rgba(255, 255, 255, .84);
@@ -601,6 +602,10 @@ h1 {
   }
 
   .project.exam {
+    padding-left: 78px;
+  }
+
+  .project.salary {
     padding-left: 78px;
   }
 
