@@ -1,0 +1,104 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #142033;
+  background: #edf3f8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(91, 184, 255, .2), transparent 30rem),
+    linear-gradient(145deg, #f8fbfe, #e8eff6);
+}
+
+.calendar-shell {
+  width: min(1500px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 22px 0 100px;
+}
+
+.calendar-toolbar {
+  position: sticky;
+  z-index: 2;
+  top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 11px 14px;
+  border: 1px solid rgba(22, 75, 196, .2);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 8px 22px rgba(29, 55, 94, .12);
+  backdrop-filter: blur(12px);
+}
+
+.calendar-toolbar h1 {
+  margin: 0;
+  color: #123b88;
+  font-size: clamp(18px, 3vw, 28px);
+}
+
+.calendar-actions { display: flex; gap: 8px; }
+
+.calendar-actions a,
+.calendar-actions button {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border: 1px solid #9db9e7;
+  border-radius: 10px;
+  color: #123b88;
+  background: linear-gradient(180deg, #f9fcff, #dceaff);
+  font: inherit;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.calendar-actions a:hover,
+.calendar-actions button:hover { background: #cfe2ff; }
+
+.calendar-page {
+  overflow: hidden;
+  margin: 0 auto 18px;
+  border: 1px solid #b9cbe5;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(29, 55, 94, .14);
+}
+
+.calendar-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media print {
+  @page { size: A4 landscape; margin: 0; }
+  body { background: #fff; }
+  .calendar-shell { width: 100%; padding: 0; }
+  .calendar-toolbar { display: none; }
+  .calendar-page {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    break-after: page;
+  }
+  .calendar-page:last-child { break-after: auto; }
+}
+
+@media (max-width: 620px) {
+  .calendar-shell { width: calc(100% - 14px); padding-top: 10px; }
+  .calendar-toolbar { align-items: stretch; flex-direction: column; top: 7px; }
+  .calendar-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .calendar-actions a, .calendar-actions button { width: 100%; }
+}

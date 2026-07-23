@@ -390,7 +390,18 @@ h1 {
     rgba(255, 255, 255, .84);
 }
 
+.project.calendar {
+  --accent: #164bc4;
+  grid-column: 1 / -1;
+  min-height: 126px;
+  padding-left: 126px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(102, 161, 255, .18), transparent 45%),
+    rgba(255, 255, 255, .84);
+}
+
 .project.salary .project-icon { color: var(--accent); }
+.project.calendar .project-icon { color: var(--accent); }
 
 .project-icon-logo {
   position: absolute;
@@ -606,6 +617,10 @@ h1 {
   }
 
   .project.salary {
+    padding-left: 78px;
+  }
+
+  .project.calendar {
     padding-left: 78px;
   }
 
